@@ -1,4 +1,4 @@
-<!-- <div id="mapDiv" style="width: 100%; height: 400px"> </div>
+<div id="mapDiv" style="width: 100%; height: 400px"> </div>
 <input id="latitude" name="latitude" type="text">
 <input id="longitude" name="longitude" type="text">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -24,25 +24,10 @@ type="text/javascript"></script>
             document.getElementById("longitude").value = e.latLng.lng();
             placeMarker(e.latLng, map);
 
-            // var response = function("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + e.latLng.lat() + "," + e.latLng.lng() + "&radius=1000&type=restaurant&keyword=cruise&key=AIzaSyB9ayIX4awOPtN9t78B_OLQ_jROkBpcJ_E"){
-            //     $.ajax({
-            //         url: 'welcome.blade.php',
-            //         type: 'POST',
-            //         data: {id:id},
-            //         success: function(data) {
-            //             console.log(data); // Inspect this in your console
-            //         }
-            //     });
-            // }
-
             var placesURL= "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + e.latLng.lat() + "," + e.latLng.lng() + "&radius=1000&type=restaurant&keyword=cruise&key=AIzaSyB9ayIX4awOPtN9t78B_OLQ_jROkBpcJ_E";
            // var json_obj = JSON.parse(Get(placesURL));
             console.log("The places url is "+placesURL);
-            // console.log("this is the author name: " + JSON.stringify(json_obj));
-            // $.post("/foo/", JSON.stringify(json_obj), function(temp){
-            //     console.log(temp);
-            // });
-         //   fs.writeFile("places.json",JSON.stringify(json_obj));
+        
         });
     }
     //Adding marker on click
@@ -58,14 +43,7 @@ type="text/javascript"></script>
         }
     }
 
-    //Function for Http get request
-    function Get(yourUrl) {
-        var Httpreq = new XMLHttpRequest(); // a new request
-        Httpreq.open("GET", yourUrl, false);
-        Httpreq.send(null);
-        return Httpreq.responseText;
-    }
-</script> -->
+</script>
 
 <?php
  use SKAgarwal\GoogleApi\PlacesApi;
@@ -79,6 +57,6 @@ type="text/javascript"></script>
 //   echo $response;
 //   $json_output = json_decode($response1);
 //   print_r($json_output);
-echo $response1;
+    echo $response1;
 
 ?>
